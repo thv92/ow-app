@@ -1,0 +1,24 @@
+{
+  "name": "ow-app",
+  "version": "1.0.0",
+  "description": "Web App displaying OW Heroes/Maps/Modes",
+  "main": "index.js",
+  "scripts": {
+    "start-dev": "webpack-dev-server --config='webpack.dev.config.js'",
+    "build-dev": "webpack --config webpack.dev.config.js"
+  },
+  "author": "Thien Vo",
+  "license": "MIT",
+  "dependencies": {
+    "react": "^16.5.2",
+    "react-dom": "^16.5.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.1.0",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.2",
+    "webpack": "^4.20.2",
+    "webpack-cli": "^3.1.1",
+    "webpack-dev-server": "^3.1.9"
+  }
+}
