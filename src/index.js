@@ -2,6 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 ReactDOM.render(
-            <div>HELLO NERDS</div>, 
+            <div>HELLO adfsadf!!</div>, 
                 document.getElementById("root")
 );
