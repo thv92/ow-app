@@ -5,7 +5,7 @@
   "private": true,
   "scripts": {
     "startd": "webpack-dev-server --watch --config='webpack.config.dev.js'",
-    "buildd": "webpack --config webpack.config.dev.js",
+    "buildd": "webpack --config webpack.config.dev.js"
   },
   "author": "Thien Vo",
   "license": "MIT",
