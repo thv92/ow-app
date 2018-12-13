@@ -1,0 +1,13 @@
+.NavBarDiv {
+    display: flex;
+    justify-content: space-between;
+}
+
+.NavBar {
+    height: 30px;
+}
+
+header {
+    height: 50px;
+    background-color: #1e88e5;
+}

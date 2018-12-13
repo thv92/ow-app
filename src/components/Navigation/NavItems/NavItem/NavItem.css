@@ -1,0 +1,19 @@
+.NavItem {
+    display: flex;
+    align-items: center;
+    padding: 0 25px;
+}
+
+.NavItem a {
+    text-decoration: none;
+    transition: color 0.2s ease-out;
+    color: #d5d5d5;
+}
+
+.NavItem:not(:last-child) {
+    border-right: 1px solid #959595;
+}
+
+.NavItem a:hover {
+    color: white;
+}
