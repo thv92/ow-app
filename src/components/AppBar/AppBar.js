@@ -1,18 +1,31 @@
 import React from 'react';
-import NavBar from '../Navigation/NavBar.js';
+import { Switch, Route } from 'react-router-dom';
+import Heroes from '../Heroes/Heroes';
+import Maps from '../Maps/Maps';
+import Modes from '../Modes/Modes';
+import NavItems from '../Navigation/NavItems/NavItems';
 import styles from './AppBar.css';
 
 
-const tabs = ['Heroes', 'Maps', 'Modes'];
+
+
+const tabs = [{name: 'Heroes', link: '/heroes'}, {name: 'Maps', link: '/maps'}, {name: 'Modes', link: '/modes'}];
 
 const appbar = (props) => {
     return (
-        <header>
-            <div className={styles.NavBarDiv}>
-                <div></div>
-                <NavBar tabs={tabs}/>
-            </div>
-        </header>
+        <React.Fragment>
+            <header>
+                <div className={styles.NavBarDiv}>
+                    <div></div>
+                    <NavItems tabs={ tabs }/>
+                </div>
+                <Switch>
+                    <Route path="/heroes" component={Heroes} />
+                    <Route path="/maps" component={Maps} />
+                    <Route path="/Modes" component={Modes} />
+                </Switch>
+            </header>
+        </React.Fragment>
     );
 };
 

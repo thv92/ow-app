@@ -4,11 +4,7 @@ import styles from './NavItems.css';
 
 export default (props) => {
     const navItems = props.tabs.map((tab) => {
-        let selected = false;
-        if (props.selected.toLowerCase() === tab.toLowerCase()) {
-            selected = true;
-        }
-        return <NavItem key={tab.toLowerCase()} link='#' name={tab} selected={selected} />
+        return <NavItem key={tab.name.toLowerCase()} link={tab.link} name={tab.name} />
     });
 
     return (

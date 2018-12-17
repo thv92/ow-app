@@ -4,7 +4,7 @@
     padding: 0 25px;
 }
 
-.NavItem a {
+a {
     text-decoration: none;
     transition: color 0.2s ease-out;
     color: #d5d5d5;
@@ -15,5 +15,9 @@
 }
 
 .NavItem a:hover {
+    color: white;
+}
+
+.activeTab {
     color: white;
 }
