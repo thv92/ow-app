@@ -12,9 +12,9 @@ module.exports = {
         filename: 'bundle.js',
         publicPath: '/',
     },
-    devServer: {
-        hot: true,
-    },
+    // devServer: {
+    //     hot: true,
+    // },
     module: {
         rules: [
             {
