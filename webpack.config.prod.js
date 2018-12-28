@@ -3,6 +3,10 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const webpack = require('webpack');
 const CaseSensitivePathsPlugin = require('case-sensitive-paths-webpack-plugin');
 
+//Optimizations
+const uglifyJsPlugin = require('uglifyjs-webpack-plugin');
+const optimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
+
 module.exports = {
     mode: 'development',
     entry: './src/index.js',
@@ -15,7 +19,17 @@ module.exports = {
     //     hot: true,
     // },
     target: 'web',
-    // devtool: '#source-masp',
+    // devtool: '#source-map',
+    optimization: {
+        minimizer: [
+            new uglifyJsPlugin({
+                cache: true,
+                parallel: true,
+                // sourceMap: true,
+            }),
+            new optimizeCssAssetsPlugin()
+        ]
+    },
     module: {
         rules: [
             {
@@ -64,6 +78,7 @@ module.exports = {
                                                 flexbox: 'no-2009'
                                             }
                                         }),
+                                        require('cssnano')()
                                     ]
                                 }
                             }

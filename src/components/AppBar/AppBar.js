@@ -20,10 +20,10 @@ const appbar = (props) => {
                     <NavItems tabs={ tabs }/>
                 </div>
                 <Switch>
-                    <Route path="/" component={Heroes} />
+                    <Route path="/" component={Heroes} exact={true} />
                     <Route path="/heroes" component={Heroes} />
                     <Route path="/maps" component={Maps} />
-                    <Route path="/Modes" component={Modes} />
+                    <Route path="/modes" component={Modes} />
                 </Switch>
             </header>
         </React.Fragment>
