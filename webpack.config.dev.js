@@ -5,9 +5,11 @@ const CaseSensitivePathsPlugin = require('case-sensitive-paths-webpack-plugin');
 
 module.exports = {
     mode: 'development',
-    entry: './src/index.js',
+    entry: {
+        main: ['webpack-hot-middleware/client?path=/__webpack_hmr&timeout=20000', './src/index.js']
+    },
     output: {
-        path: path.join(__dirname, 'dist'),
+        path: path.resolve('dist'),
         publicPath: '/',
         filename: 'bundle.js',
     },
@@ -15,7 +17,7 @@ module.exports = {
     //     hot: true,
     // },
     target: 'web',
-    // devtool: '#source-masp',
+    // devtool: '#source-map',
     module: {
         rules: [
             {

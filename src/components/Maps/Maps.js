@@ -5,7 +5,7 @@ import React from 'react';
 const Maps = () => {
     return (
         <main>
-            <div>Maps</div>
+            <div>Maps CHANGED 4</div>
         </main>
     );
 }
