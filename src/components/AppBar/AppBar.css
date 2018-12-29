@@ -10,4 +10,5 @@
 header {
     height: 50px;
     background-color: #1e88e5;
+    box-shadow: 0 1px 2px 4px rgba(0,0,0, .16);
 }

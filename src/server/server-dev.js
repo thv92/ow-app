@@ -35,4 +35,3 @@ app.listen(port, function(){
     console.log("Serving files from: " + path.resolve(compiler.outputPath, 'index.html'));
     console.log(`Listening on port: ${port}`);
 });
-

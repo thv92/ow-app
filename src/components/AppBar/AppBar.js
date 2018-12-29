@@ -19,13 +19,13 @@ const appbar = (props) => {
                     <div></div>
                     <NavItems tabs={ tabs }/>
                 </div>
-                <Switch>
-                    <Route path="/" component={Heroes} exact={true} />
-                    <Route path="/heroes" component={Heroes} />
-                    <Route path="/maps" component={Maps} />
-                    <Route path="/modes" component={Modes} />
-                </Switch>
             </header>
+            <Switch>
+                <Route path="/" component={Heroes} exact={true} />
+                <Route path="/heroes" component={Heroes} />
+                <Route path="/maps" component={Maps} />
+                <Route path="/modes" component={Modes} />
+            </Switch>
         </React.Fragment>
     );
 };
