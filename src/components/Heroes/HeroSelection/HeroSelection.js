@@ -6,9 +6,10 @@ const bio = {
     alias: "Mercy",
     name: "Angela Ziegler",
     age: "37",
-    location: "Zürich, Switzerland",
+    location: "Zürich, Switzerland (formerly)",
     nationality: "Swiss",
-    occupation: "Field Medic"
+    occupation: "Field Medic",
+    role: "support"
 };
 
 const img = {
@@ -24,7 +25,17 @@ export default () => {
             <div>Hero Selection</div>
             <div>
                 <h1>Hero Card</h1>
+                <ul>
+
                 <HeroCard bio={bio} img={img}/>
+                <HeroCard bio={bio} img={img}/>
+                <HeroCard bio={bio} img={img}/>
+                <HeroCard bio={bio} img={img}/>
+                <HeroCard bio={bio} img={img}/>
+                <HeroCard bio={bio} img={img}/>
+                <HeroCard bio={bio} img={img}/>
+                <HeroCard bio={bio} img={img}/>
+                </ul>
             </div>
         </div>
     );

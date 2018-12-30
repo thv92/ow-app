@@ -7,7 +7,13 @@
     background-color: #B9F6CA;
     margin: 5px 10px;
     border: 1px solid #979797;
-    box-shadow: 1px 2px 4px 1px rgba(0,0,0,0.25);
+    box-shadow: 1px 2px 4px 1px rgba(0,0,0,0.21);
+    transition: box-shadow .16s ease-in;
+    border-radius: 3px;
+}
+
+.outerCard:hover {
+    box-shadow: 1px 3px 5px 2px rgba(0,0,0,0.26);
 }
 
 .innerCard {
@@ -17,7 +23,7 @@
     width: 320px;
     background: #F5F5F5;
     border: 1px solid #979797;
-    box-shadow: 2px 3px 3px 0 rgba(0,0,0,0.25);
+    /* box-shadow: 2px 3px 3px 0 rgba(0,0,0,0.21); */
 }
 
 .avatarSection {
@@ -31,11 +37,13 @@
 .bioSection {
     flex-grow: 2;
     margin-left: 15px;
-    font-family: AvenirNext-Regular;
-    font-size: .8em;
+    /* font-family: AvenirNext-Regular; */
+    padding-top: 2px;
+    font-size: .7em;
+    /* color: #7B4747; */
     color: #4A4A4A;
     text-align: left;
-    line-height: 1.4em;
+    line-height: 1.6em;
 }
 
 .alias {
@@ -45,10 +53,20 @@
     text-align: center;
 }
 
-/* .title {
-    font-size: .8em;
+.icon {
+    position: absolute;
+    margin-left: 18em;
+    width: 20px;
+    height: 20px;
+}
+
+
+
+.title {
+    font-family: AvenirNext-Bold;
 }
 
 .value {
-    font-size: .75em;
-} */
+    font-family: AvenirNext-Regular;
+}
+

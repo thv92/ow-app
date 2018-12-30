@@ -1,3 +1,4 @@
-.clipCircle {
-    clip-path: circle(60px at center);
+.cropCircle {
+    border-radius: 50%;   
+    border: 2px solid #474747;
 }

@@ -2,12 +2,12 @@ import React from 'react';
 import styles from './Image.css';
 
 const image = (props) => {
-    let clip = null;
+    let shape = null;
     if (props.circle) {
-        clip = styles.clipCircle;
+        shape = styles.cropCircle;
     }
     return (
-        <img className={clip} src={props.src} 
+        <img className={shape} src={props.src} 
              width={props.width + "px"} height={props.height + "px"}/>
     );
 }
