@@ -1,6 +1,6 @@
 import React from 'react';
 import HeroCard from './HeroCard/HeroCard';
-
+import styles from './HeroSelection.css';
 
 const bio = {
     alias: "Mercy",
@@ -21,22 +21,29 @@ const img = {
 
 export default () => {
     return (
-        <div>
-            <div>Hero Selection</div>
-            <div>
-                <h1>Hero Card</h1>
-                <ul>
+        <div className={styles.heroListContainer}>
+            <ul className={styles.heroList}>
+                <li className={styles.heroItem}><HeroCard bio={bio} img={img}/></li>
+                <li className={styles.heroItem}><HeroCard bio={bio} img={img}/></li>
+                <li className={styles.heroItem}><HeroCard bio={bio} img={img}/></li>
+                <li className={styles.heroItem}><HeroCard bio={bio} img={img}/></li>
+                <li className={styles.heroItem}><HeroCard bio={bio} img={img}/></li>
+                <li className={styles.heroItem}><HeroCard bio={bio} img={img}/></li>
+                <li className={styles.heroItem}><HeroCard bio={bio} img={img}/></li>
+                <li className={styles.heroItem}><HeroCard bio={bio} img={img}/></li>
+                <li className={styles.heroItem}><HeroCard bio={bio} img={img}/></li>
+                <li className={styles.heroItem}><HeroCard bio={bio} img={img}/></li>
+                <li className={styles.heroItem}><HeroCard bio={bio} img={img}/></li>
+                <li className={styles.heroItem}><HeroCard bio={bio} img={img}/></li>
+                <li className={styles.heroItem}><HeroCard bio={bio} img={img}/></li>
+                <li className={styles.heroItem}><HeroCard bio={bio} img={img}/></li>
+                <li className={styles.heroItem}><HeroCard bio={bio} img={img}/></li>
+                <li className={styles.heroItem}><HeroCard bio={bio} img={img}/></li>
+                <li className={styles.heroItem}><HeroCard bio={bio} img={img}/></li>
+                <li className={styles.heroItem}><HeroCard bio={bio} img={img}/></li>
+                <li className={styles.heroItem}><HeroCard bio={bio} img={img}/></li>
 
-                <HeroCard bio={bio} img={img}/>
-                <HeroCard bio={bio} img={img}/>
-                <HeroCard bio={bio} img={img}/>
-                <HeroCard bio={bio} img={img}/>
-                <HeroCard bio={bio} img={img}/>
-                <HeroCard bio={bio} img={img}/>
-                <HeroCard bio={bio} img={img}/>
-                <HeroCard bio={bio} img={img}/>
-                </ul>
-            </div>
+            </ul>
         </div>
     );
 };

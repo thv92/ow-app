@@ -5,8 +5,3 @@ main {
     margin: 0 auto;
     margin-top: 40px;
 }
-
-.container {
-    display: flex;
-    flex-direction: column;
-}

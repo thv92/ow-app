@@ -1,0 +1,22 @@
+.heroList {
+     display: flex;
+    list-style: none;
+    flex-direction: row;
+    flex-flow: wrap;
+    list-style-type: none;
+    margin: 0 auto;
+    padding: 0 0;
+    width: 76%;
+}
+
+.heroItem {
+    margin-bottom: 8px;
+}
+
+.heroItem:nth-child(2n+1) {
+    margin-right: 4px;
+}
+
+.heroItem:nth-child(2n) {
+    margin-left: 4px;
+}

@@ -5,7 +5,7 @@ import styles from './Heroes.css';
 const Heroes = () => {
     return (
         <main>
-            <div className="container">
+            <div className="heroSelection">
                 <div className="bar" >Search Bar Placement</div>
                 <HeroSelection />
             </div>

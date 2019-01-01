@@ -41,7 +41,6 @@ const heroCard = (props) => {
                 <img className={styles.icon} src={icon} />
             </div>
         </div>
-
     );
 }
 
