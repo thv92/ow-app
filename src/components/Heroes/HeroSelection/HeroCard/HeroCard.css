@@ -37,10 +37,8 @@
 .bioSection {
     flex-grow: 2;
     margin-left: 15px;
-    /* font-family: AvenirNext-Regular; */
     padding-top: 2px;
     font-size: .7em;
-    /* color: #7B4747; */
     color: #4A4A4A;
     text-align: left;
     line-height: 1.6em;
