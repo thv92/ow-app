@@ -8,7 +8,7 @@ export default (props) => {
     });
 
     return (
-        <ul className={styles.NavItems}>
+        <ul className={styles.NavItems} style={props.ulStyle}>
             {navItems}
         </ul>
     );
