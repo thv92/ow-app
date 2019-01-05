@@ -1,48 +1,19 @@
 import React from 'react';
 import HeroCard from './HeroCard/HeroCard';
 import styles from './HeroSelection.css';
+import { Link } from 'react-router-dom';
 
-const bio = {
-    alias: "Mercy",
-    name: "Angela Ziegler",
-    age: "37",
-    location: "Zürich, Switzerland (formerly)",
-    nationality: "Swiss",
-    occupation: "Field Medic",
-    role: "support"
-};
+export default (props) => {
+    const cards = props.cards.map((card) => {
+        return (
+            <li key={card.bio.name.toLowerCase()} className={styles.heroItem}><Link to={card.link}><HeroCard bio={card.bio} icon={card.icon} cardClicked={props.cardClicked} /></Link></li>
+        );
+    })
 
-const img = {
-    src: "https://d1u5p3l4wpay3k.cloudfront.net/overwatch_gamepedia/thumb/0/03/Icon-Mercy.png/150px-Icon-Mercy.png",
-    height: "65",
-    width: "65",
-    circle: true
-};
-
-export default () => {
     return (
         <div className={styles.heroListContainer}>
             <ul className={styles.heroList}>
-                <li className={styles.heroItem}><HeroCard bio={bio} img={img}/></li>
-                <li className={styles.heroItem}><HeroCard bio={bio} img={img}/></li>
-                <li className={styles.heroItem}><HeroCard bio={bio} img={img}/></li>
-                <li className={styles.heroItem}><HeroCard bio={bio} img={img}/></li>
-                <li className={styles.heroItem}><HeroCard bio={bio} img={img}/></li>
-                <li className={styles.heroItem}><HeroCard bio={bio} img={img}/></li>
-                <li className={styles.heroItem}><HeroCard bio={bio} img={img}/></li>
-                <li className={styles.heroItem}><HeroCard bio={bio} img={img}/></li>
-                <li className={styles.heroItem}><HeroCard bio={bio} img={img}/></li>
-                <li className={styles.heroItem}><HeroCard bio={bio} img={img}/></li>
-                <li className={styles.heroItem}><HeroCard bio={bio} img={img}/></li>
-                <li className={styles.heroItem}><HeroCard bio={bio} img={img}/></li>
-                <li className={styles.heroItem}><HeroCard bio={bio} img={img}/></li>
-                <li className={styles.heroItem}><HeroCard bio={bio} img={img}/></li>
-                <li className={styles.heroItem}><HeroCard bio={bio} img={img}/></li>
-                <li className={styles.heroItem}><HeroCard bio={bio} img={img}/></li>
-                <li className={styles.heroItem}><HeroCard bio={bio} img={img}/></li>
-                <li className={styles.heroItem}><HeroCard bio={bio} img={img}/></li>
-                <li className={styles.heroItem}><HeroCard bio={bio} img={img}/></li>
-
+                {cards}
             </ul>
         </div>
     );
