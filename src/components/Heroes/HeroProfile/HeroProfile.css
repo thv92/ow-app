@@ -1,0 +1,62 @@
+.container {
+    display: flex;
+    flex-flow: nowrap;
+    flex-direction: row;
+}
+
+.left {
+    width: 30%;
+}
+
+.alias {
+    display: flex;
+    width: 100%;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    font-family: AvenirNext-Bold;
+    color: white;
+    background-color: #4a4a4a;
+    box-shadow: 0 4px 3px 1px rgba(0,0,0,.23);
+
+}
+
+.propic {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+    width: 100%;
+    border: 4px solid #474747;
+    border-radius: 3px;
+    margin-top: 30px;
+}
+
+
+.bio {
+    border: 4px solid #474747;
+    margin-top: 20px;
+}
+.title {
+    background-color: #474747;
+    color: white;
+    font-family: AvenirNext-Bold;
+}
+
+.value {
+    font-family: AvenirNext-Regular;
+}
+
+.right {
+    width: 70%;
+    
+}
+
+.navArea {
+    display: flex;
+    background-color: #474747;
+    height: 50px;
+    align-items: center;
+    justify-content: center;
+}
