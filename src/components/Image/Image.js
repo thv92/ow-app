@@ -8,7 +8,7 @@ const image = (props) => {
     }
     return (
         <img className={shape} src={props.src} 
-             width={props.width + "px"} height={props.height + "px"}/>
+            style={props.style}/>
     );
 }
 
