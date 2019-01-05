@@ -8,7 +8,7 @@
     "buildServer": "webpack --mode development --config webpack.config.server.js",
     "buildApp": "webpack --mode development --config webpack.config.dev.js",
     "start": "node ./dist/server.js",
-    "run" : "yarn buildDev && yarn start"
+    "runApp" : "yarn buildDev && yarn start"
   },
   "author": "Thien Vo",
   "license": "MIT",
