@@ -21,7 +21,10 @@ export default [
                 ],
                 "description": "Mercy automatically heals over time.",
                 "icon": "iconLink",
-                "video": "videoLink",
+                "videos": [{
+                    "link": "VIDEOLINK",
+                    "type": "video/webm"
+                }],
                 "type": "Passive"
             },
             {
@@ -29,7 +32,10 @@ export default [
                 "stats": [],
                 "description": "Propelled by her Valkyrie suit, Mercy slows the speed of her descent from great heights.",
                 "icon": "iconLink",
-                "video": "videoLink",
+                "videos": [{
+                    "link": "VIDEOLINK",
+                    "type": "video/webm"
+                }],
                 "type": "Passive"
             },
             {
@@ -44,7 +50,10 @@ export default [
                 ],
                 "description": "Mercy engages one of two beams that connect to an ally. By maintaining the beams, she can either restore that ally’s health or increase the amount of damage they deal.",
                 "icon": "iconLink",
-                "video": "videoLink",
+                "videos": [{
+                    "link": "VIDEOLINK",
+                    "type": "video/webm"
+                }],
                 "type": "Weapon"
             }
             
@@ -82,8 +91,11 @@ export default [
                     ["Headshot", "Yes"]
                 ],
                 "description": "Ashe's semi-automatic rifle fires quick shots.",
-                "icon": "iconLink",
-                "video": "videoLink",
+                "icon": "https://d1u5p3l4wpay3k.cloudfront.net/overwatch_gamepedia/4/4e/Ability-ashe1.png?version=d0fe575ed3b4a9314adc5b8061108131",
+                "videos": [{
+                    "link": "https://d1u1mce87gyfbn.cloudfront.net/hero/ashe/ability-the-viper/video-ability.webm",
+                    "type": "video/webm"
+                }],
                 "type": "Weapon (Primary Fire)"
             },
             {
@@ -105,10 +117,47 @@ export default [
                     ["Headshot", "Yes"]
                  ],
                 "description": "Ashe can use her aim-down sights for a more damaging, precise shot.",
-                "icon": "iconLink",
-                "video": "videoLink",
+                "icon": "https://d1u5p3l4wpay3k.cloudfront.net/overwatch_gamepedia/4/4e/Ability-ashe1.png?version=d0fe575ed3b4a9314adc5b8061108131",
+                "videos": [{
+                    "link": "VIDEOLINK",
+                    "type": "video/webm"
+                }],
                 "type": "Weapon (Scope)"
+            },
+            {
+                "name": "Dynamite",
+                "stats": [["Stat", "StatValue"]],
+                "description": "Ashe throws an explosive that detonates after a short delay or immediately when shot. The explosion from Dynamite also lights enemies on fire, dealing damage over time.",
+                "icon": "https://d1u5p3l4wpay3k.cloudfront.net/overwatch_gamepedia/d/da/Ability-ashe2.png?version=f9f217e782bd9ada8aaa69972566bdd4",
+                "videos": [{
+                    "link": "VIDEOLINK",
+                    "type": "video/webm"
+                }],
+                "type": "Ability"
+            },
+            {
+                "name": "B.O.B.",
+                "stats": [["Stat", "StatValue"]],
+                "description": "Ashe summons her trusted omnic sidekick, B.O.B., who charges forward and knocks enemies into the air, then lays down suppressing fire with his arm cannons.",
+                "icon": "https://d1u5p3l4wpay3k.cloudfront.net/overwatch_gamepedia/7/7a/Ability-ashe4.png?version=7a54b9a263a69319c289143bba4ce59a",
+                "videos": [{
+                    "link": "VIDEOLINK",
+                    "type": "video/webm"
+                }],
+                "type": "Ultimate Ability"
+            },
+            {
+                "name": "Coach Gun",
+                "stats": [["Stat", "StatValue"]],
+                "description": "Ashe blasts enemies in front of her, knocking them away and propelling herself backward for added mobility.",
+                "icon": "https://d1u5p3l4wpay3k.cloudfront.net/overwatch_gamepedia/8/85/Ability-ashe3.png?version=de47b39b889abf4007ebda56955c1a45",
+                "videos": [{
+                    "link": "VIDEOLINK",
+                    "type": "video/webm"
+                }],
+                "type": "Ability"
             }
+
         ]
     },
     {
@@ -142,7 +191,10 @@ export default [
                 ],
                 "description": "D.Va's mech is equipped with twin short-range rotating cannons. They lay down continuous, high-damage fire without needing to reload, but slow D.Va’s movement while they’re active.",
                 "icon": "iconLink",
-                "video": "videoLink",
+                "videos": [{
+                    "link": "VIDEOLINK",
+                    "type": "video/webm"
+                }],
                 "type": "Weapon"
             },
             {
@@ -154,7 +206,10 @@ export default [
                 ],
                 "description": "D.Va can activate this forward-facing targeting array to shoot incoming projectiles out of the air.",
                 "icon": "iconLink",
-                "video": "videoLink",
+                "videos": [{
+                    "link": "VIDEOLINK",
+                    "type": "video/webm"
+                }],
                 "type": "Ability"
             },
             {
@@ -169,8 +224,11 @@ export default [
                 ],
                 "description": "D.Va’s mech launches into the air, her momentum carrying her forward. She can turn and change directions or barrel through her enemies, knocking them back.",
                 "icon": "iconLink",
-                "video": "videoLink",
-                "type": "weapon"
+                "videos": [{
+                    "link": "VIDEOLINK",
+                    "type": "video/webm"
+                }],
+                "type": "Ability"
             }
         ]
     }

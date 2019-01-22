@@ -1,0 +1,17 @@
+.section {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+
+.title {
+    font-family: AvenirNext-Bold;
+    margin: 0 auto;
+    margin-bottom: 1em;
+    text-decoration: underline;
+}
+
+.iconCards {
+    display: flex;
+    flex: 1;
+}

@@ -2,6 +2,7 @@
     display: flex;
     flex-flow: nowrap;
     flex-direction: row;
+    justify-content: space-between;
 }
 
 .left {
@@ -11,14 +12,14 @@
 .alias {
     display: flex;
     width: 100%;
-    height: 50px;
+    height: 1.5em;
     justify-content: center;
     align-items: center;
     font-size: 2em;
     font-family: AvenirNext-Bold;
     color: white;
     background-color: #4a4a4a;
-    box-shadow: 0 4px 3px 1px rgba(0,0,0,.23);
+    /* box-shadow: 0 4px 4px 2px rgba(0,0,0,.23); */
 
 }
 
@@ -30,7 +31,7 @@
     width: 100%;
     border: 4px solid #474747;
     border-radius: 3px;
-    margin-top: 30px;
+    margin-top: 15px;
 }
 
 
@@ -49,14 +50,42 @@
 }
 
 .right {
-    width: 70%;
+    width: 65%;
     
 }
 
-.navArea {
+.nav {
+    list-style: none;
     display: flex;
-    background-color: #474747;
-    height: 50px;
+    flex-flow: nowrap;
+    justify-content: space-around;
     align-items: center;
+    background-color: #474747;
+    height: 3em;
+    margin: 0 0;
+    padding: 0 0;
+    /* box-shadow: 0 4px 4px 2px rgba(0,0,0,.23); */
+}
+
+.navItem {
+    display: flex;
     justify-content: center;
+    font-family: AvenirNext-Bold;
+    width: 100%;
+    font-size: 1.3em;
+    color: #d7d7d7;
+    transition: color .2s ease-in;
+}
+
+.navItem:hover {
+    color: white;
+    cursor: pointer;
+}
+
+.navItem:not(:last-child) {
+    border-right: solid 2px #d7d7d7;
+}
+
+.activeTab {
+    color: white;
 }

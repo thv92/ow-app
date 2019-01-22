@@ -2,7 +2,7 @@ import React from 'react';
 import HeroSelection from './HeroSelection/HeroSelection';
 import HeroProfile from './HeroProfile/HeroProfile';
 import MockData from '../../sampleData/sample';
-import { Switch, Route } from 'react-router-dom';
+import { Switch, Route, NavLink } from 'react-router-dom';
 import styles from './Heroes.css';
 
 
@@ -11,19 +11,20 @@ class Heroes extends React.Component {
     constructor(props) {
         super(props);
         this.onCardClicked = this.onCardClicked.bind(this);
-    }
-
-    componentWillMount() {
-        this.setState((state, props) => {
-            return {
-                cards: this.getCardData(MockData),
-                routes: this.getRoutes(MockData)
-            };
-        });
+        this.state = {
+            cards: this.getCardData(MockData),
+            routes: this.createRoutes(MockData),
+            showSelection: true
+        };
     }
 
     onCardClicked(heroName) {
         console.log(`HERO CLICKED: ${heroName}`)
+        this.setState((state, props) => {
+            return {
+                showSelection: !state.showSelection
+            };
+        });
     }
 
     getCardData(data) {
@@ -42,41 +43,50 @@ class Heroes extends React.Component {
                     width: "65px",
                     circle: true
                 },
-                link: `${this.props.match.url}/${heroInfo.bio.alias}`
+                link: `${this.props.match.url}/${heroInfo.bio.alias}`.toLowerCase()
             }
         });
     }
 
-    getRoutes(data) {
+    createRoutes(data) {
         return data.map((heroInfo) => {
             return (
-                <Route key={heroInfo.bio.alias} path={`${this.props.match.url}/${heroInfo.bio.alias}`} render={(props) => <HeroProfile {...props} heroData={heroInfo}/>} />
+                <Route key={heroInfo.bio.alias} path={`${this.props.match.url}/${heroInfo.bio.alias}`.toLowerCase()} render={(props) => <HeroProfile {...props} heroData={heroInfo}/>} />
             );
         });
     }
-
     
     render() {
         console.log(this.state.routes);
-        // <div className={styles.heroProfile}>
-        //     <HeroProfile bio={bio} match={this.props.match}/>
-        // </div>
+        const width = this.state.showSelection ? { width: '60em'} : { width: '90%'};
+
         return (
-            <main>
-                <div className="heroSelection">
-                    <div className="bar" >Search Bar Placement</div>
-                    <HeroSelection cards={this.state.cards} cardClicked={this.onCardClicked}/>
-                </div>
+            <main style={width}>
+                {this.state.showSelection ? 
+                    (
+                    <div className="heroSelection">
+                        <div className="bar" >Search Bar Placement</div>
+                        <HeroSelection cards={this.state.cards} cardClicked={this.onCardClicked}/>
+                    </div>
+                    ) : null}
+                {!this.state.showSelection ?
+                (
                 <div>
-                    <Switch>
-                        {this.state.routes}
-                    </Switch>
-                </div>
+                    <div className={styles.navBack}>
+                    <NavLink className={styles.navLink} to={this.props.match.url} onClick={this.onCardClicked}>Hero Selection</NavLink>
+                    </div>
+
+                    <div>
+                        <Switch>
+                            {this.state.routes}
+                        </Switch>
+                    </div>
+                 </div>
+                ) : null}
             </main>
         );
     }
 
 }
-
 
 export default Heroes;

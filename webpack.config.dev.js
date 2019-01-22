@@ -27,8 +27,26 @@ module.exports = {
                         loader: require.resolve('url-loader'),
                         options: {
                             limit:10000,
-                            name: 'assets/[name].[hash:8].[ext]'
+                            name: 'assets/[name].[hash:8].[ext]',
                         }
+                    },
+                    {
+                        test: /\.svg$/,
+                        use: [
+                          {
+                            loader: "babel-loader"
+                          },
+                          {
+                            loader: "react-svg-loader",
+                            options: {
+                              svgo: {
+                                  plugins: [
+                                    {removeStyleElement: false}, {removeRasterImages: true}
+                                  ],
+                              }
+                            }
+                          }
+                        ]
                     },
                     {
                         test: /\.js$/,
@@ -76,7 +94,7 @@ module.exports = {
                         loader: require.resolve('file-loader'),
                         exclude: [/\.(js|jsx|mjs)$/, /\.html$/, /\.json$/],
                         options: {
-                            name: '/assets/[name].[hash:8].[ext]'
+                            name: 'assets/[name].[hash:8].[ext]'
                         }
                     }
                 ]

@@ -1,9 +1,9 @@
 import React from 'react';
 import styles from './HeroCard.css';
 import Image from '../../../Image/Image';
-import damage from '../../../../assets/roles/damageIcon.png';
-import support from '../../../../assets/roles/supportIcon.png';
-import tank from '../../../../assets/roles/tankIcon.png';
+import damage from '../../../../assets/images/icons/roles/damageIcon.png';
+import support from '../../../../assets/images/icons/roles/supportIcon.png';
+import tank from '../../../../assets/images/icons/roles/tankIcon.png';
 
 
 
@@ -21,7 +21,7 @@ const heroCard = (props) => {
                 break;
             case 'damage':
                 icon = damage;
-                color = "#FF8A80";
+                color = "#FFA19A";
                 break;
             case 'tank':
                 icon = tank;

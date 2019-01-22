@@ -1,0 +1,35 @@
+.container {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #6d6d6d;
+    margin: .5em .4em;
+    padding: 0 .3em;
+    padding-top: 1em;
+    box-shadow: 1px 2px 3px 0 rgba(0,0,0,.22);
+    transition: all .1s ease-in;
+}
+
+.container:hover {
+    box-shadow: 3px 4px 8px 0 rgba(0,0,0,.28);
+    cursor: pointer;
+}
+
+
+.imageContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70%;
+}
+
+.textContainer {
+    display: flex;
+    align-items: center;
+}
+
+.name {
+    font-family: AvenirNext-Bold;
+}
+

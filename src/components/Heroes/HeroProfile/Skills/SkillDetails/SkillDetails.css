@@ -1,0 +1,32 @@
+.container {
+    display: flex;
+    flex-flow: column;
+    flex-direction: nowrap;
+    width: 100%;
+    border: solid 2px red;
+}
+
+.containerBody {
+    display: flex;
+
+}
+
+.videoSection {
+    width: 50%;
+}
+
+.stats {
+    width: 50%;
+}
+
+.desc {
+    font-family: AvenirNext-Italic;
+    font-size: 1.4em;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.video {
+    width: 95%;
+    height: 90%;
+}
